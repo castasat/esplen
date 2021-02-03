@@ -1,9 +1,11 @@
 package com.github.castasat.esplen.domain
 
-open class Object : Any(), Responsibility {
-    override fun responsibility(): String = RESPONSIBILITY
+import com.github.castasat.esplen.domain.interfaces.Responsibility
+
+abstract class Object : Any(), Responsibility {
+    abstract override fun responsibility(): String
 
     companion object {
-        private const val RESPONSIBILITY = "Object is a common ancestor of any data type"
+        const val RESPONSIBILITY = "Object is a common ancestor of any data type"
     }
 }

@@ -1,4 +1,4 @@
-package com.github.castasat.esplen.domain
+package com.github.castasat.esplen.domain.interfaces
 
 import org.junit.Assert.*
 import org.junit.Test
