@@ -2,6 +2,7 @@ package com.github.castasat.esplen.domain
 
 import org.junit.Assert.*
 import org.junit.Test
+import kotlin.reflect.full.companionObjectInstance
 import kotlin.reflect.full.functions
 
 /**
@@ -23,11 +24,11 @@ class ObjectTest {
     }
 
     @Test
-    fun responsibilityShouldReturnTheRightValue() {
+    fun responsibilityFunctionShouldReturnResponsibilityConstant() {
         assertEquals(
             "Responsibility should be present in Object",
-            "Object is a common ancestor of any data type",
-            objectUnderTest.responsibility()
+            objectUnderTest.responsibility(),
+            (Object::class.companionObjectInstance as Object.Companion).RESPONSIBILITY
         )
     }
 }
